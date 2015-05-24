@@ -53,9 +53,8 @@ clase
 # 2.7 Calcular la media de todas las variables numéricas (double, integer).
 
 media <- numeric(ncol(data))
-med <- ncol
 for (i in 1:ncol(data)){
-  media[i] <- mean(data[,i])
+  media[i] <- mean(data[,i],na.rm = TRUE)
 }
 media
 
@@ -101,6 +100,6 @@ table(data_setc[,"Score"],data_setc[,"Edad"],data_setc[,"Numero_TC"])
 
 hist(edad,col = "red",main="Edad")
 
-r# 4.2 Realice un diagrama de cajas de la variable Edad, utilice como color de relleno: green
+# 4.2 Realice un diagrama de cajas de la variable Edad, utilice como color de relleno: green
 
 boxplot(edad,col = "green",main="Edad")
